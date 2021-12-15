@@ -4,27 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Immagini
-.first-image {
-    background-image: url(img/01.jpg);
-}
-
-.second-image {
-    background-image: url(img/02.jpg);
-}
-
-.third-image {
-    background-image: url(img/03.jpg);
-}
-
-.fourth-image {
-    background-image: url(img/04.jpg);
-}
-
-.fifth-image {
-    background-image: url(img/05.jpg);
-} */
-
 /*Elementi pagina*/
 .container {
     width: 560px;
@@ -55,8 +34,9 @@
     color: white;
     line-height: 14px;
     position: absolute;
-    bottom: 14px;
-    right: 12px;
+    bottom: 0;
+    right: 0;
+    margin: 12px 14px;
 }
 
 .showing-image-title {
@@ -105,6 +85,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    cursor: pointer;
 }
 
 .arrow.up {
