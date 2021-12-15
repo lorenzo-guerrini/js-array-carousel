@@ -50,7 +50,7 @@ let currentItem = 0;
 // Funzionamento arrow up
 document.querySelector(".arrow.up").addEventListener("click", function () {
 
-    //Gestisce l'item da deselezionare
+    //Gestisce l'item da deselezionare a dx
     const oldItem = document.querySelector(".selector-image-" + currentItem);
 
     oldItem.classList.remove("selected");
@@ -62,7 +62,7 @@ document.querySelector(".arrow.up").addEventListener("click", function () {
         currentItem = items.length - 1;
     }
 
-    //Gestisce l'item da selezionare
+    //Gestisce l'item da selezionare a dx
     const newItem = document.querySelector(".selector-image-" + currentItem);
 
     newItem.classList.remove("unselected");
@@ -79,7 +79,7 @@ document.querySelector(".arrow.up").addEventListener("click", function () {
 // Funzionamento arrow down
 document.querySelector(".arrow.down").addEventListener("click", function () {
 
-    //Gestisce l'item da deselezionare
+    //Gestisce l'item da deselezionare a dx
     const oldItem = document.querySelector(".selector-image-" + currentItem);
 
     oldItem.classList.remove("selected");
@@ -91,7 +91,7 @@ document.querySelector(".arrow.down").addEventListener("click", function () {
         currentItem = 0;
     }
 
-    //Gestisce l'item da selezionare
+    //Gestisce l'item da selezionare a dx
     const newItem = document.querySelector(".selector-image-" + currentItem);
 
     newItem.classList.remove("unselected");
