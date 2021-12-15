@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/*Immagini*/
+/* Immagini
 .first-image {
     background-image: url(img/01.jpg);
 }
@@ -23,7 +23,7 @@
 
 .fifth-image {
     background-image: url(img/05.jpg);
-}
+} */
 
 /*Elementi pagina*/
 .container {
@@ -81,18 +81,18 @@
     height: 100%;
 }
 
-.selector-image {
+[class^="selector-image-"] {
     width: 100%;
     height: 20%;
     background-position: center;
     background-size: cover;
 }
 
-.selector-image.unselected {
+[class^="selector-image-"].unselected {
     filter: brightness(50%);
 }
 
-.selector-image.selected {
+[class^="selector-image-"].selected {
     border: 1.5px solid #CCCCCC;
 }
 
