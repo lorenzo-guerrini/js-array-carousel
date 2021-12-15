@@ -4,6 +4,28 @@
     box-sizing: border-box;
 }
 
+/*Immagini*/
+.first-image {
+    background-image: url(img/01.jpg);
+}
+
+.second-image {
+    background-image: url(img/02.jpg);
+}
+
+.third-image {
+    background-image: url(img/03.jpg);
+}
+
+.fourth-image {
+    background-image: url(img/04.jpg);
+}
+
+.fifth-image {
+    background-image: url(img/05.jpg);
+}
+
+/*Elementi pagina*/
 .container {
     width: 560px;
     height: 200px;
@@ -14,19 +36,39 @@
     display: flex;
 }
 
+/*Parte sx container*/
 .showing {
     height: 100%;
     width: 465px;
+    position: relative;
 }
 
 .showing-image {
     width: 100%;
     height: 100%;
-    background-image: url(img/01.jpg);
     background-position: center;
     background-size: cover;
 }
 
+.showing-image-description {
+    text-align: right;
+    color: white;
+    line-height: 14px;
+    position: absolute;
+    bottom: 14px;
+    right: 12px;
+}
+
+.showing-image-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.showing-image-text {
+    font-size: 11px;
+}
+
+/*Parte dx container*/
 .images-selector {
     height: 100%;
     width: 95px;
@@ -46,24 +88,17 @@
     background-size: cover;
 }
 
-.selector-image.first {
-    background-image: url(img/01.jpg);
+.selector-image.unselected {
+    filter: brightness(50%);
 }
 
-.selector-image.second {
-    background-image: url(img/02.jpg);
+.selector-image.selected {
+    border: 1.5px solid #CCCCCC;
 }
 
-.selector-image.third {
-    background-image: url(img/03.jpg);
-}
-
-.selector-image.fourth {
-    background-image: url(img/04.jpg);
-}
-
-.selector-image.fifth {
-    background-image: url(img/05.jpg);
+.arrows {
+    font-size: 13px;
+    color: #CCCCCC;
 }
 
 .arrow {
@@ -73,9 +108,9 @@
 }
 
 .arrow.up {
-    top: 5px;
+    top: 6px;
 }
 
 .arrow.down {
-    bottom: 5px;
+    bottom: 6px;
 }
