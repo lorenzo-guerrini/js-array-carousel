@@ -39,9 +39,63 @@ for (let i = 0; i < items.length; i++) {
 
 document.querySelector(".showing-image").style.backgroundImage = "url(" + items[0] + ")";
 
+document.querySelector(".showing-image-title").innerHTML = title[0];
+
+document.querySelector(".showing-image-text").innerHTML = text[0];
+
 let currentItem = 0; //indica l'elemento attualmente mostrato
 
-
+// Funzionamento arrow up
 document.querySelector(".arrow.up").addEventListener("click", function() {
-    
+    const oldItem = document.querySelector(".selector-image-" + currentItem);
+
+    oldItem.classList.remove("selected");
+
+    oldItem.classList.add("unselected");
+
+    currentItem--;
+
+    if (currentItem < 0 ) {
+        currentItem = items.length - 1;
+    }
+
+    const newItem = document.querySelector(".selector-image-" + currentItem);
+
+    newItem.classList.remove("unselected");
+
+    newItem.classList.add("selected");
+
+    document.querySelector(".showing-image").style.backgroundImage = "url(" + items[currentItem] + ")";
+
+    document.querySelector(".showing-image-title").innerHTML = title[currentItem];
+
+    document.querySelector(".showing-image-text").innerHTML = text[currentItem];
 })
+
+// Funzionamento arrow down
+document.querySelector(".arrow.down").addEventListener("click", function() {
+    const oldItem = document.querySelector(".selector-image-" + currentItem);
+
+    oldItem.classList.remove("selected");
+
+    oldItem.classList.add("unselected");
+
+    currentItem++;
+
+    if (currentItem > items.length - 1) {
+        currentItem = 0;
+    }
+
+    const newItem = document.querySelector(".selector-image-" + currentItem);
+
+    newItem.classList.remove("unselected");
+
+    newItem.classList.add("selected");
+
+    document.querySelector(".showing-image").style.backgroundImage = "url(" + items[currentItem] + ")";
+
+    document.querySelector(".showing-image-title").innerHTML = title[currentItem];
+
+    document.querySelector(".showing-image-text").innerHTML = text[currentItem];
+})
+
